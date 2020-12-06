@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <link rel="icon" type="image/png" href="..\static/images/icons/images.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color:lightslategrey;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar input {
+  float: right;
+  display: block;
+  color:black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar input:hover {
+  background:darkgrey;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+
+body {
+    background-image: url('../static/images/logo4.jpg');
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-position:center; /* Center the image */ 
+    background-repeat: no-repeat; /* Do not repeat the image */ 
+    background-size: 100%,100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+</style>
+</head>
+<body>
+    <form class="login100-form validate-form" action="/" method="GET">
+        <div class="navbar" navbar-right>
+            <input type="submit" value="Register" formaction="/signup">
+            <input type="submit" value="Login" formaction="/login" >
+        </div>
+    </form>
+
+<div class="main">
+</div>
+
+</body>
+</html>

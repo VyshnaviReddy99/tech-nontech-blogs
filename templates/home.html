@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <link rel="icon" type="image/png" href="..\static/images/icons/images.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {margin:0;}
+
+.navbar {
+  overflow: hidden;
+  background-color: lightslategrey;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar input {
+  float: right;
+  display: block;
+  background: white;
+  color:black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar input:hover {
+  background: lightgray;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+
+div {
+  background-image: url('./images/icons/background.jpg');
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  text-align: center;
+  align-self: center;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  text-align: center;
+  padding: 2px 16px;
+}
+
+h1.headingblog {
+  text-align: center;
+  font-style :italic;
+}
+
+h4{
+font-weight: normal;
+}
+</style>
+</head>
+<body>
+
+  <form class="login100-form validate-form" action="/" method="GET">
+    <div class="navbar" navbar-right>
+      <input type="submit" value="Logout" formaction="/logout" >
+      <input type="submit" value="My blogs" formaction="/myblogs">
+      <input type="submit" value="Create Blog" formaction="/createblog">
+    </div>
+</form>
+
+  <div class="main">
+    <h3>Hello {{name}}
+    <h1 class="headingblog">Blogs</h1></h3>
+    <div class="card">
+      <!--<img src="img_avatar.png" alt="Avatar" style="width:100%">-->
+      {%for i in range(0, length)%} 
+        <div class="container">
+          <h3><b>{{fetched[i][0]}}</b></h3> 
+          <h4>{{fetched[i][2]}}</h4>
+        </div>
+      {%endfor%} 
+    </div>
+  </div> 
+
+</body>
+</html>
